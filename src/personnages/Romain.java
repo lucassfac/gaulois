@@ -1,4 +1,4 @@
-package romain;
+package personnages;
 
 public class Romain {
 
@@ -18,5 +18,20 @@ public class Romain {
 		return "Le romain " + nom + " : ";
 	}
 	
+	public static void main(String[] args) {
+		Romain Obelix = new Romain("Obx", 8);
+	}
+	public void recevoirCoup(int forceCoup) {
+		force = this.force - forceCoup;
+		if (this.force < 1) {
+			System.out.printf("J'abandonne");
+			
+		}
+		else {
+			System.out.printf("Aie");
+		}
+	}
+	
+
 
 }
