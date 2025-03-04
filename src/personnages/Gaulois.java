@@ -24,14 +24,23 @@ public class Gaulois {
 		return getNom() + " [nom=" + nom + ", force=" + force + "]";
 	}
 	
-	public static void main(String[] args) {
-		Gaulois g = new Gaulois("Ast", 8);
-		System.out.println(g);
-	}
 	public void frapper(Romain romain) {
 		String nomRomain = romain.getNom();
-		System.out.println(nom + "envoie un grand coup dans la mâchoire de " + nomRomain);
+		System.out.println(nom + "envoie un grand coup dans la mï¿½choire de " + nomRomain);
 		int forceCoup = force / 3;
 		romain.recevoirCoup(forceCoup);
+	}
+	public static void main(String[] args) {
+		Gaulois g = new Gaulois("ast",8);
+		Romain obx = new Romain("obx",7);
+		Romain Min = new Romain("Minux",6);
+		
+		g.parler("Bonjour Obï¿½lix.");
+		obx.parler("Bonjour Astï¿½rix. Ca te dirais d'aller chasser des sangliers ?");
+		g.parler("Oui trï¿½s bonne idï¿½e.");
+		
+		g.frapper(Min);
+		g.frapper(Min);
+		g.frapper(Min);
 	}
 }
